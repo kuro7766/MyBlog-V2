@@ -63,7 +63,7 @@ jobs:
 
       - run: cp -r ./docs/.vuepress/dist/* ./
       - run: git add -f ./docs/.vuepress/dist/
-      - run: git add -f ./
+#       - run: git add -f ./
       - run: git commit -m "auto changes"
       - run: git fetch
 
