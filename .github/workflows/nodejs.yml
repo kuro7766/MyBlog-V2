@@ -22,14 +22,14 @@ jobs:
         with:
           node-version: "14.x" # 版本14
 
-      - name: Cache node modules
-        id: cache # 缓存id
-        uses: actions/cache@v3
-        env:
-          cache-name: cache-node-modules # 缓存名字
-        with:
-          path: node_modules # 缓存路径
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('package.json') }} # 缓存标识
+#       - name: Cache node modules
+#         id: cache # 缓存id
+#         uses: actions/cache@v3
+#         env:
+#           cache-name: cache-node-modules # 缓存名字
+#         with:
+#           path: node_modules # 缓存路径
+#           key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('package.json') }} # 缓存标识
 
 
       - name: Install Dependencies
