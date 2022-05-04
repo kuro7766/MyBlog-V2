@@ -60,8 +60,9 @@ jobs:
           sudo git config --system core.longpaths true
 
 
-
+      - run: cp -r ./docs/.vuepress/dist ./
       - run: git add -f ./docs/.vuepress/dist/
+      - run: git add -f ./dist
       - run: git commit -m "auto changes"
       - run: git fetch
 
