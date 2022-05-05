@@ -60,12 +60,12 @@ jobs:
           sudo git config --local user.name "myself"
           sudo git config --system core.longpaths true
 
-
-      - run: cp -r ./docs/.vuepress/dist/* ./
-      - run: git add -f ./docs/.vuepress/dist/
-#       - run: git add -f ./
+      - run: mkdir -p web
+      - run: cp -r ./docs/.vuepress/dist/* ./web/
+#       - run: git add -f ./docs/.vuepress/dist/
+      - run: git add -f ./web
       - run: git commit -m "auto changes"
-      - run: git fetch
+#       - run: git fetch
 
       - name: Push changes
         uses: ad-m/github-push-action@master
